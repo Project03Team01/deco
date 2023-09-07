@@ -6,6 +6,12 @@ module.exports = {
     './components/**/*.{html,js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
       colors: {
         gray: {
@@ -60,7 +66,8 @@ module.exports = {
         '1/1': '100%',
       },
       fontFamily: {
-        inter: ['var(--font-inter)', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+
       },
       fontSize: {
         xs: '0.75rem',
@@ -124,6 +131,9 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+      },
+      borderRadius: {
+        '4xl': '2rem',
       },
     },
   },
