@@ -1,15 +1,28 @@
-import React, { useEffect, useState } from 'react';
- import { useQuery, userQuery } from '@apollo/client';
+import React, {  useState } from 'react';
+
+
+ import { useQuery } from '@apollo/client';
  import { QUERY_QUESTIONS } from '../../utils/queries';
-function Quiz() {
-  const [activeQuestion, setActiveQuestion] = useState(0)
-  const [selectedAnswer, setSelectedAnswer] = useState('')
+ 
+const Quiz = () => {
+ const [activeQuestion, setActiveQuestion] = useState(0)
+ const { data } = useQuery(QUERY_QUESTIONS);
+ 
+  // const [selectedAnswer, setSelectedAnswer] = useState('')
+console.log(data)
+  const questions = data?.questions || [];
+  
+  console.log(questions)
+  const quizData = questions.map(question =>({
+    text: question.text,
+    image: question.image,
+    category: question.category,
+    answerId: question.answerId
+  }) )
+  console.log(quizData)
+  // const currentQuestion = quizData[activeQuestion];
+ 
 
-  const [ questions ] = useQuery(QUERY_QUESTIONS);
-
-  // {activeQuestion.questions.map((question) => (
-
-  // ))}
 
   const onClickNext = () => {
     setActiveQuestion((prev) => prev + 1)
@@ -22,11 +35,13 @@ function Quiz() {
       <h2>This is the quiz</h2>
       <div>
       <ul>
-       <li>
-        {questions}
-         <button onClick={onClickNext}>Next</button>
-       </li>
+        <li>{quizData.text}</li>
+        
       </ul>
+        
+         <button onClick={onClickNext}>Next</button>
+       
+     
       </div>
    
     </div>   
