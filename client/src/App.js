@@ -62,7 +62,7 @@ function App() {
                 element={<NoMatch />} 
               />
               <Route 
-                path="/browse" 
+                path="/categories" 
                 element={<Categories />} 
               />
               <Route 

@@ -38,7 +38,7 @@ function QuizPage() {
   }
 
 
-  <Container>
+  <Container style={{padding: "20px"}}>
       {questions.map((question, index) => (
         <div key={index}>
           <Header as='h2' textAlign='center'>
