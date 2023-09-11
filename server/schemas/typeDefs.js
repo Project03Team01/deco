@@ -5,7 +5,7 @@ const typeDefs = gql`
     answerId: String
     text: String!
     category: String
-    image: String
+    image: [String]
   }
 
 

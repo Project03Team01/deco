@@ -28,9 +28,13 @@ const questionSchema = new Schema({
     required: true
   },
   answers: [answerSchema],
-  image: {
-    type: String
-  },
+  image: [
+    {
+      type: String,
+    },
+  ],
+    
+  
 });
 
 const Question = mongoose.model('Question', questionSchema);

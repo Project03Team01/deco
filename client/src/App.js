@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -37,6 +37,10 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const title = 'deco'
+  useEffect(() => {
+    document.title = title;
+  }, []);
   return (
     <ApolloProvider client={client}>
       <Router>

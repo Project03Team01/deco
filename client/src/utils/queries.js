@@ -26,6 +26,7 @@ export const QUERY_QUESTIONS = gql`
         image
         category
         answerId
+        image
       }
     
   }`
