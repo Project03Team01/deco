@@ -5,10 +5,11 @@ import { Container, Grid } from "semantic-ui-react";
 
 
 export function Frame() {
-    
+        const frame = frameStyle[0]
+
         const topLeft = {
-            background: `url(${frameStyle.imgCorner})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgCorner})`,
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
@@ -17,8 +18,8 @@ export function Frame() {
         }
     
         const frameTop = {
-            background: `url(${frameStyle.imgTop})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgTop})`,
+            backgroundSize: "contain",
             backgroundRepeat: "repeat-x",
             backgroundPosition: "center",
             width: "100%",
@@ -27,8 +28,8 @@ export function Frame() {
         }
     
         const topRight = {
-            background: `url(${frameStyle.imgCorner})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgCorner})`,
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             transform: "rotateY(180deg)",
@@ -38,8 +39,8 @@ export function Frame() {
         }
     
         const frameLeft = {
-            background: `url(${frameStyle.imgSide})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgSide})`,
+            backgroundSize: "contain",
             backgroundRepeat: "repeat-y",
             backgroundPosition: "center",
             width: "100%",
@@ -48,8 +49,8 @@ export function Frame() {
         }
     
         const frameRight = {
-            background: `url(${frameStyle.imgSide})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgSide})`,
+            backgroundSize: "contain",
             backgroundRepeat: "repeat-y",
             backgroundPosition: "center",
             transform: "rotateX(180deg)",
@@ -59,8 +60,8 @@ export function Frame() {
         }
     
         const bottomLeft = {
-            background: `url(${frameStyle.imgCorner})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgCorner})`,
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             transform: "rotateX(180deg)",
@@ -70,8 +71,8 @@ export function Frame() {
         }
     
         const frameBottom = {
-            background: `url(${frameStyle.imgTop})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgTop})`,
+            backgroundSize: "contain",
             backgroundRepeat: "repeat-x",
             backgroundPosition: "center",
             transform: "rotateX(180deg)",
@@ -81,8 +82,8 @@ export function Frame() {
         }
     
         const bottomRight = {
-            background: `url(${frameStyle.imgCorner})`,
-            backgroundSize: "cover",
+            background: `url(${frame.imgCorner})`,
+            backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             transform: "rotateX(180deg) rotateY(180deg)",
@@ -92,7 +93,7 @@ export function Frame() {
         }
     
         const artwork = {
-            background: `url(${frameStyle.artImg})`,
+            background: `url(${frame.artImg})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "top",
@@ -112,7 +113,7 @@ export function Frame() {
                     }
                     `}
                 </style>
-                <Grid className="outerFrame">
+                <Grid centered className="outerFrame">
                     <Grid.Row>
                         <Grid.Column style={topLeft} />
                         <Grid.Column style={frameTop} />
