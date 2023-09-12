@@ -10,18 +10,15 @@ function QuizPage() {
   // const [selectedAnswer, setSelectedAnswer] = useState('')
 
   const [ loading, data ] = useQuery(QUERY_QUESTIONS);
+  console.log(data);
 
-  const questions = data?.question || [];
+  const questions = data?.questions || [];
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // {activeQuestion.questions.map((question) => (
 
-  // ))}
-
-  // const questionNum = questions[0] + 1
 
   const onClickNext = () => {
     setActiveQuestion((prev) => prev + 1)
