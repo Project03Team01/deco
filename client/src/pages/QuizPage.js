@@ -9,7 +9,13 @@ function QuizPage() {
   const [activeQuestion, setActiveQuestion] = useState(0)
   // const [selectedAnswer, setSelectedAnswer] = useState('')
 
-  const [ questions ] = useQuery(QUERY_QUESTIONS);
+  const [ loading, data ] = useQuery(QUERY_QUESTIONS);
+
+  const questions = data?.question || [];
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   // {activeQuestion.questions.map((question) => (
 

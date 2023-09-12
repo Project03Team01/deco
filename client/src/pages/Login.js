@@ -60,7 +60,7 @@ function Login(props) {
             <p>The provided credentials are incorrect</p>
           </Message>
         )}
-        <Button type="submit">Submit</Button>
+        <Button secondary className='text-dark' type="submit">Submit</Button>
       </Form>
     </Container>
   );
