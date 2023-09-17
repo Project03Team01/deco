@@ -68,13 +68,13 @@ const resolvers = {
       }
     },
   },
-  Category: {
+  /* Category: {
     images: async (parent) => {
       const categoryId = parent._id;
       const images = await Image.findOne({ category: categoryId });
       return images;
     },
-  },
+  }, */
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create({ ...args, userScore: {} });
