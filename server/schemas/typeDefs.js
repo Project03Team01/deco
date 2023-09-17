@@ -6,7 +6,7 @@ const typeDefs = gql`
     name: String
     scoreCategory: String
     description: String
-    image: [Image]
+    images: [Image]
   }
 
   type Image {
@@ -86,7 +86,6 @@ const typeDefs = gql`
   }
   
   input ImageInput {
-    _id: ID
     src: String
     artist: String
   }

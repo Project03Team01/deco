@@ -69,10 +69,10 @@ const resolvers = {
     },
   },
   Category: {
-    image: async (parent) => {
+    images: async (parent) => {
       const categoryId = parent._id;
-      const image = await Image.findOne({ category: categoryId });
-      return image;
+      const images = await Image.findOne({ category: categoryId });
+      return images;
     },
   },
   Mutation: {
@@ -102,14 +102,16 @@ const resolvers = {
     },
     updateCategory: async (parent, { category, images }, context) => {
       const currentCategory = await Category.findById(category._id);
+      console.log('currentCategory:', currentCategory);
 
       if (!currentCategory) {
-        throw new Error('Category not found');
+        throw new AuthenticationError('Category not found');
       }
 
       currentCategory.images = images;
 
       const updatedCategory = await currentCategory.save();
+      console.log('updatedCategory:', updatedCategory)
       return updatedCategory;
     },
 
