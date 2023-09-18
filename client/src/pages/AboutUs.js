@@ -37,7 +37,7 @@ const AboutUs = () => {
     <div class="content">
       <div class="ui header purple centered">Travis Hoffman</div>
       <div class="meta">
-        <span class="date">Data Miner</span>
+        
       </div>
       <div class="description">
       Considered his own favorite cryptid, this particular species is renowned for being peer-reviewed, snarky,
