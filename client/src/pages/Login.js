@@ -31,8 +31,8 @@ function Login(props) {
   };
 
   return (
-    <Container className="my-1">
-      <Link to="/signup">← Go to Signup</Link>
+    <Container className="my-1" style={{ margin: "1rem" }}>
+      <Link to="/signup" style={{ color: '#925BFF', fontWeight: '600' }}>← Go to Signup</Link>
 
       <Header as="h2">Login</Header>
       <Form onSubmit={handleFormSubmit}>
