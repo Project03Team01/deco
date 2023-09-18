@@ -88,26 +88,26 @@ function UserProfile() {
             <Segment textAlign="center">
               <Header>Top Art Styles</Header>
               <List>
-                <List.Item>
+                <List.Item style={{ paddingBottom: "12px" }}>
                   <Link 
                     to={`/art/${categoryIdArray[0]}`} 
-                    style={{color: "black", fontWeight: "bold"}}
+                    style={{color: "#925BFF", fontSize: "1.25rem", fontWeight: "bold"}}
                   >
                     {categoryNameArray[0]}
                   </Link>
                 </List.Item>
-                <List.Item>
+                <List.Item style={{ paddingBottom: "12px" }}>
                   <Link 
                     to={`/art/${categoryIdArray[1]}`} 
-                    style={{color: "black", fontWeight: "bold"}}
+                    style={{color: "#925BFF", fontSize: "1.25rem", fontWeight: "bold"}}
                   >
                     {categoryNameArray[1]}
                   </Link>
                 </List.Item>
-                <List.Item>
+                <List.Item >
                   <Link 
                     to={`/art/${categoryIdArray[2]}`} 
-                    style={{color: "black", fontWeight: "bold"}}
+                    style={{color: "#925BFF", fontSize: "1.25rem", fontWeight: "bold"}}
                   >
                     {categoryNameArray[2]}
                   </Link>
