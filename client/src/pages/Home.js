@@ -17,8 +17,7 @@ const Home = () => {
   return (
     <Container className="homePage-container" >
       
-        <h1  class="ui header orange centered" style={{'marginBottom': '2em'}} >Welcome to Deco!</h1>
-     
+    <h1  class="ui header orange centered" style={{marginBottom: '1em', display: "block" , fontSize: "4em", padding: "10px", 'box-shadow': '-9px 9px 18px -3px rgba(0,0,0,0.5)'}} >Welcome to Deco!</h1>
      
      <div class="ui stackable three column grid " style={{'box-shadow': '-9px 9px 18px -3px rgba(0,0,0,0.5)'}}>
      
@@ -74,12 +73,12 @@ const Home = () => {
       <Grid.Row>
       <div class='ui header centered' style={{'margin': '2em', 'padding': '2em'}} >
         {loggedIn ? (
-          <Button className="secondary text-dark centered" onClick={navigateProfile} > Take the Test</Button>
+          <Button className="secondary text-dark centered quizButton" onClick={navigateProfile} > Take the Test</Button>
 
         ) : (
           <>
-           <Button className="secondary text-dark centered"  style= {{'margin': '1em'}}onClick={() => navigate("/login")} > LogIn</Button>
-          <Button className="secondary text-dark centered"style= {{'margin': '1em'}} onClick={() => navigate("/signup")} > Signup</Button>
+           <Button className="text-dark centered quizButton"  style= {{margin: '1em', backgroundColor: "#888" }}onClick={() => navigate("/login")} > Log In</Button>
+          <Button className="secondary text-dark centered quizButton"style= {{'margin': '1em'}} onClick={() => navigate("/signup")} > Signup</Button>
           </>
         )}
           </div>
